@@ -1,0 +1,17 @@
+import subprocess
+
+def send_message(message):
+    """Send a message to all devices on the same network."""
+    command = f"msg * {message}"
+    subprocess.run(command, shell=True)
+
+def main():
+    
+    message = input("Enter the message to be sent: ")
+
+    
+    while True:
+        send_message(message)
+
+if __name__ == "__main__":
+    main()
